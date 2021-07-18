@@ -77,7 +77,6 @@ a {
     color: $blackColor;
     background: $whiteColor;
     border: 1px solid $blackColor;
-    padding: 0 0.5rem;
   }
 }
 
@@ -98,6 +97,7 @@ a {
   white-space: nowrap !important;
   text-align: center;
   text-decoration: none;
+  padding: 0.5rem 1.5rem;
   position: absolute;
   top: 1rem;
   left: 1rem;
