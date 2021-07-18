@@ -1,0 +1,134 @@
+/* import */
+@import "./modules/fonts";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./partials/normalize";
+
+/* general */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: 62.25%;
+}
+
+body {
+  background: $grayColor;
+  z-index: 0;
+  overflow-x: hidden;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.wrapper {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.wrapper--long {
+  width: 90%;
+}
+
+.wrapper--short {
+  width: 75%;
+}
+
+/* width for screen */
+.small-width {
+  display: block;
+  @media (min-width: $mediumWidth) {
+    display: none;
+  }
+}
+
+.medium-width {
+  display: none;
+  @media (min-width: $mediumWidth) {
+    display: block;
+  }
+}
+
+.large-width {
+  display: none;
+  @media (min-width: $largeWidth) {
+    display: block;
+  }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $whiteColor;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blackColor;
+  border-radius: 6px;  
+}
+
+/* web accessibility */
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+a:focus {
+  color: $blackColor;
+  background: $whiteColor;
+  border: 1px solid $blackColor;
+  padding: 0 0.5rem;
+}
+
+/* skip links */
+.skip-links {
+  list-style: none;
+}
+
+.skip-link {
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+  &:focus,
+  &:active {
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    height: auto !important;
+    margin: auto !important;
+    overflow: visible !important;
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
