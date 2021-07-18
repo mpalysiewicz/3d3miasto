@@ -298,3 +298,69 @@ a {
     line-height: 16rem;
   }
 }
+
+/* idea */
+.idea__box {
+  @include flex(column, center, center);
+  margin-bottom: 5rem;
+
+  &:nth-of-type(2) {
+    flex-direction: column-reverse;
+    @media (min-width: $mediumWidth) {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: $mediumWidth) {
+    @include flex(row, center, space-between);
+  }
+
+  @media (min-width: $largeWidth) {
+    margin-bottom: 10.7rem;
+  }
+}
+
+.idea__photo {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: $mediumWidth) {
+    width: 50%;
+  }
+}
+
+.idea__text {
+  width: 100%;
+  font-weight: 400;
+  padding: 0.5rem 2rem;
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+
+    @media (min-width: $largeWidth) {
+      font-size: 4rem;
+      line-height: 5.2rem;
+      margin: 0;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+
+    @media (min-width: $largeWidth) {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+  }
+
+  @media (min-width: $largeWidth) {
+    width: 50%;
+    padding: 5rem;
+  }
+}
+
+/* timetable */
