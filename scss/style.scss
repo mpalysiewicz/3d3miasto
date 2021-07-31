@@ -29,7 +29,7 @@ body {
 }
 
 .wrapper {
-  width: 85%;
+  width: 95%;
   max-width: 1250px;
   margin: 0 auto;
   font-size: 1.6rem;
@@ -162,10 +162,6 @@ body {
   @media (min-width: $mediumWidth) {
     right: 5.8rem;
   }
-
-  @media (min-width: $largeWidth) {
-    right: 10.8rem;
-  }
 }
 
 .hamburger__box {
@@ -252,12 +248,10 @@ body {
   font-weight: 300;
   font-size: 2.4rem;
   line-height: 3.38rem;
-  border: 1px solid transparent;
   z-index: 0;
 
   &:hover,
   &:focus {
-    border-color: $blackColor;
     background: $whiteColor;
   }
 
@@ -283,31 +277,27 @@ body {
 /* hero */
 .hero {
   @include flex(column-reverse, center, center);
-  padding: 3.5rem 0;
+  margin: 3.5rem 0;
+  background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+
   @media (min-width: $largeWidth) {
     @include flex(row, center, space-between);
   }
 }
 
-.text__wrapper {
-  width: 100%;
-  padding: 0.5rem;
-  @media (min-width: $largeWidth) {
-    width: 50%;
-  }
-}
-
 .hero-title {
+  width: 100%;
   font-size: 3rem;
   font-weight: 300;
   line-height: 4rem;
-  padding: 2rem 0;
+  padding: 2rem;
   text-align: center;
   @media (min-width: $mediumWidth) {
     font-size: 6rem;
     line-height: 6rem;
   }
   @media (min-width: $largeWidth) {
+    width: 50%;
     font-size: 8rem;
     line-height: 8rem;
     text-align: left;
@@ -316,6 +306,8 @@ body {
 
 .photo__wrapper {
   width: 90%;
+  margin: 0 auto;
+  line-height: 0;
   img {
     width: 100%;
     height: 100%;
@@ -329,3 +321,43 @@ body {
   }
 }
 
+/* about us */
+.section-title {
+  margin: 5.5rem 0;
+  font-size: 4.5rem;
+  font-weight: 400;
+  text-align: center
+}
+
+.about-us__box {
+  @include flex(column, flex-start, center);
+  margin-bottom: 4.5rem;
+  text-align: center;
+
+  &--reverse {
+    @include flex(column-reverse, flex-start, center);
+  }
+  @media (min-width: $largeWidth) {
+    @include flex(row, flex-start, space-between);
+  }
+}
+
+.text__wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0 0.5rem;
+  margin: auto 0;
+
+  p {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+  }
+
+  @media (min-width: $largeWidth) {
+    width: 50%;
+    text-align: left;
+    padding: 0 3.5rem;
+  }
+}
