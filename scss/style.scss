@@ -32,7 +32,7 @@ body {
   width: 95%;
   max-width: 1250px;
   margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 /* scrollbar */
@@ -322,17 +322,24 @@ body {
 }
 
 /* about us */
+.about-us {
+  margin-bottom: 5.5rem;
+}
+
 .section-title {
   margin: 5.5rem 0;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 400;
-  text-align: center
+  text-align: center;
+
+  @media (min-width: $largeWidth) {
+    font-size: 4.5rem;
+  }
 }
 
 .about-us__box {
   @include flex(column, flex-start, center);
   margin-bottom: 4.5rem;
-  text-align: center;
 
   &--reverse {
     @include flex(column-reverse, flex-start, center);
@@ -346,18 +353,41 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: 0 0.5rem;
   margin: auto 0;
 
-  p {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 2.6rem;
+  @media (min-width: $largeWidth) {
+    text-align: left;
   }
 
+  &--width {
+    @media (min-width: $largeWidth) {
+      width: 50%;
+    }
+  }
+}
+
+p {
+  font-weight: 400;
+  line-height: 2.6rem;
+  padding: 0 1.5rem;
+}
+
+.padding--left {
   @media (min-width: $largeWidth) {
-    width: 50%;
+    padding: 0 0 0 3.5rem;
+  }
+}
+
+.padding--right {
+  @media (min-width: $largeWidth) {
+    padding: 0 3.5rem 0 0;
+  }
+}
+
+/* for whom */ 
+.for-whom {
+  text-align: center;
+  @media (min-width: $largeWidth) {
     text-align: left;
-    padding: 0 3.5rem;
   }
 }
