@@ -367,9 +367,12 @@ body {
 }
 
 p {
+  padding: 0 1.5rem;
   font-weight: 400;
   line-height: 2.6rem;
-  padding: 0 1.5rem;
+  @media (min-width: $largeWidth) {
+    padding: 0;
+  }
 }
 
 .padding--left {
