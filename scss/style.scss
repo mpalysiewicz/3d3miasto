@@ -29,16 +29,10 @@ body {
 }
 
 .wrapper {
+  width: 85%;
+  max-width: 1250px;
   margin: 0 auto;
-  font-size: 2rem;
-}
-
-.wrapper--long {
-  width: 90%;
-}
-
-.wrapper--short {
-  width: 75%;
+  font-size: 1.6rem;
 }
 
 /* scrollbar */
@@ -70,15 +64,6 @@ body {
   white-space: nowrap !important;
 }
 
-a {
-  transition: all 0.2s;
-
-  &:focus {
-    color: $blackColor;
-    background: $whiteColor;
-  }
-}
-
 /* skip links */
 .skip-links {
   list-style: none;
@@ -101,6 +86,8 @@ a {
   top: 1rem;
   left: 1rem;
   z-index: 999;
+  color: $blackColor;
+  background: $whiteColor;
   &:focus,
   &:active {
     clip: auto !important;
@@ -114,24 +101,41 @@ a {
   }
 }
 
-/* header */
 .header {
   padding: 2.8rem 0;
 }
 
 .header__wrapper {
-  @include flex(row, center, space-between);
+  @include flex(column, flex-start, flex-start);
+
+  @media (min-width: $mediumWidth) {
+    @include flex(row, center, space-between);
+  }
 }
 
 .logo {
-  &:focus {
-    padding: 0;
+  text-decoration: none;
+}
+
+.info {
+  text-align: left;
+  line-height: 1.5;
+  a {
+    color: $blackColor;
+    &:hover,
+    &:focus {
+      color: $blackColor;
+      background: $whiteColor;
+    }
+  }
+  @media (min-width: $mediumWidth) {
+    text-align: center;
   }
 }
 
 .hamburger {
   width: 50px;
-  height: 40px;
+  height: 50px;
   display: inline-block;
   border: 0;
   margin: 0;
@@ -140,15 +144,27 @@ a {
   z-index: 6;
   cursor: pointer;
   transition: transform .3s .1s ease-in-out, visibility 0s .4s;
-  position: relative;
+  position: absolute;
+  top: 3.8rem;
+  right: 3.8rem;
+  background: $blackColor;
 
-  &:hover,
-  &:focus {
-    background: $whiteColor;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid $blackColor;
+    position: absolute;
+    bottom: -15%;
+    right: -15%;
+  }
+
+  @media (min-width: $mediumWidth) {
+    right: 5.8rem;
   }
 
   @media (min-width: $largeWidth) {
-    display: none;
+    right: 10.8rem;
   }
 }
 
@@ -162,7 +178,7 @@ a {
 .hamburger__inner {
   width: 100%;
   height: 3px;
-  background-color: $blackColor;
+  background-color: $whiteColor;
   position: absolute;
   left: 0;
   top: 50%;
@@ -174,7 +190,7 @@ a {
     content: "";
     width: 100%;
     height: 3px;
-    background-color: $blackColor;
+    background-color: $whiteColor;
     position: absolute;
     left: 0;
     transition: transform 0.2s 0.2s ease-in-out;
@@ -190,7 +206,6 @@ a {
 }
 
 .hamburger--active {
-  background-color: transparent;
 
   .hamburger__inner {
     background-color: transparent;
@@ -217,15 +232,6 @@ a {
   transform: translateX(100%);
   z-index: 5;
   transition: transform .3s .1s ease-in-out, visibility 0s .4s;
-
-  @media (min-width: $largeWidth) {
-    height: auto; 
-    background-color: transparent;
-    transform: translateX(0);
-    visibility: visible;
-    position: static;
-    z-index: 0;
-  }
 }
 
 .navigation__list {
@@ -235,10 +241,6 @@ a {
   line-height: 2;
   text-align: center;
   z-index: 5;
-
-  @media (min-width: $largeWidth) {
-    @include flex(row, center, space-between);
-  }
 }
 
 .navigation__link {
@@ -246,18 +248,29 @@ a {
   color: $blackColor;
   text-decoration: none;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   font-weight: 300;
   font-size: 2.4rem;
   line-height: 3.38rem;
+  border: 1px solid transparent;
+  z-index: 0;
 
   &:hover,
   &:focus {
+    border-color: $blackColor;
     background: $whiteColor;
   }
 
-  @media (min-width: $largeWidth) {
-    padding: 0 4.15rem;
+  &:hover::before,
+  &:focus::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 }
 
@@ -269,98 +282,50 @@ a {
 
 /* hero */
 .hero {
-  margin-bottom: 10rem;
-
+  @include flex(column-reverse, center, center);
+  padding: 3.5rem 0;
   @media (min-width: $largeWidth) {
-    background: url("../img/photo.png") no-repeat;
-    background-position: right bottom;
-  }
-}
-
-.hero__wrapper {
-  text-align: center;
-
-  @media (min-width: $largeWidth) {
-    text-align: left;
-    padding-bottom: 20rem;
-  }
-}
-
-.hero__title {
-  color: $whiteColor;
-  font-weight: 300;
-  font-size: 10vw;
-  padding: 0 0.6rem;
-  margin: 0;
-
-  @media (min-width: $largeWidth) {
-    font-size: 16rem;
-    line-height: 16rem;
-  }
-}
-
-/* idea */
-.idea__box {
-  @include flex(column, center, center);
-  margin-bottom: 5rem;
-
-  &:nth-of-type(2) {
-    flex-direction: column-reverse;
-    @media (min-width: $mediumWidth) {
-      flex-direction: row;
-    }
-  }
-
-  @media (min-width: $mediumWidth) {
     @include flex(row, center, space-between);
   }
+}
 
+.text__wrapper {
+  width: 100%;
+  padding: 0.5rem;
   @media (min-width: $largeWidth) {
-    margin-bottom: 10.7rem;
+    width: 50%;
   }
 }
 
-.idea__photo {
-  width: 100%;
+.hero-title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+  @media (min-width: $mediumWidth) {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+  @media (min-width: $largeWidth) {
+    font-size: 8rem;
+    line-height: 8rem;
+    text-align: left;
+  }
+}
+
+.photo__wrapper {
+  width: 90%;
   img {
     width: 100%;
+    height: 100%;
   }
-
-  @media (min-width: $mediumWidth) {
-    width: 50%;
+  @media (min-width: 800px) {
+    width: 60%;
   }
-}
-
-.idea__text {
-  width: 100%;
-  font-weight: 400;
-  padding: 0.5rem 2rem;
-
-  h3 {
-    font-size: 2rem;
-    line-height: 2.2rem;
-
-    @media (min-width: $largeWidth) {
-      font-size: 4rem;
-      line-height: 5.2rem;
-      margin: 0;
-    }
-  }
-
-  p {
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-
-    @media (min-width: $largeWidth) {
-      font-size: 2rem;
-      line-height: 2.6rem;
-    }
-  }
-
   @media (min-width: $largeWidth) {
     width: 50%;
-    padding: 5rem;
+    height: auto;
   }
 }
 
-/* timetable */
