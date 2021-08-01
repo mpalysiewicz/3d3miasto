@@ -252,10 +252,12 @@ body {
   font-size: 2.4rem;
   line-height: 3.38rem;
   z-index: 0;
+  border: 1px solid transparent;
 
   &:hover,
   &:focus {
     background: $whiteColor;
+    border-color: lightgray;
   }
 
   &:hover::before,
@@ -354,7 +356,7 @@ body {
 }
 
 .section-title {
-  margin: 5.5rem 0;
+  margin: 2.5rem 0;
   font-size: 2.5rem;
   font-weight: 400;
   text-align: center;
@@ -381,12 +383,7 @@ body {
 .text__wrapper {
   width: 100%;
   height: 100%;
-  text-align: center;
   margin: auto 0;
-
-  @media (min-width: $largeWidth) {
-    text-align: left;
-  }
 
   &--width {
     @media (min-width: $largeWidth) {
@@ -417,13 +414,6 @@ p {
 }
 
 /* for whom */ 
-.for-whom {
-  text-align: center;
-  @media (min-width: $largeWidth) {
-    text-align: left;
-  }
-}
-
 .section-list {
   list-style: none;
   text-align: left;
@@ -461,5 +451,128 @@ p {
   }
   @media (min-width: $mediumWidth) {
     padding: 0;
+  }
+}
+
+/* timetable */ 
+.date {
+  font-size: 2rem;
+  line-height: 6.5rem;
+  font-weight: 400;
+  text-align: center;
+
+  @media (min-width: $mediumWidth) {
+    font-size: 5rem;
+    text-align: left;
+  }
+}
+
+.program__item {
+  @include flex(column, flex-start, center);
+
+  @media (min-width: $mediumWidth) {
+    @include flex(row, flex-start, space-between);
+  }
+}
+
+.program__name {
+  width: 100%;
+  @include flex(row, center, center);
+  padding: 1rem 0;
+
+  @media (min-width: $mediumWidth) {
+    width: 30%;
+    @include flex(row, center, flex-start);
+  }
+}
+
+.icon {
+  margin-right: 1.5rem;
+  @media (min-width: $mediumWidth) {
+    margin-right: 2.5rem;
+  }
+}
+
+.program__description {
+  width: 100%;
+  padding: 0 0 1rem;
+  position: relative;
+
+  p {
+    background: lightgray;
+    border: 1px solid lightgray;
+    padding: 1rem;
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 1px solid lightgray;
+      background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+      position: absolute;
+      bottom: -15.5%;
+      right: -1.5%;
+      z-index: -1;
+      display: none;
+      @media (min-width: $mediumWidth) {
+        display: block;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: $whiteColor;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    display: none;
+    @media (min-width: $mediumWidth) {
+      display: block;
+    }
+  }
+  @media (min-width: $mediumWidth) {
+    width: 70%;
+    padding: 0 0 1rem 2.5rem;
+  }
+}
+
+/* legend */
+.legend {
+  padding: 4.5rem 0;
+}
+
+.legend__title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.legend__boxes {
+  @include flex(row, flex-start, space-between);
+  flex-wrap: wrap;
+}
+
+.legend__box {
+  width: 100%;
+
+  @media (min-width: $mediumWidth) {
+    width: 50%;
+  }
+
+  @media (min-width: $largeWidth) {
+    width: 33%;
+  }
+}
+
+.legend__item {
+  @include flex(row, center, flex-start);
+  margin-bottom: 2.5rem;
+
+  img {
+    margin-right: 1.5rem;
   }
 }
