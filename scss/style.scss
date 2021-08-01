@@ -29,10 +29,13 @@ body {
 }
 
 .wrapper {
-  width: 95%;
+  width: 90%;
   max-width: 1250px;
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  @media (min-width: $mediumWidth) {
+    font-size: 2rem;
+  }
 }
 
 /* scrollbar */
@@ -279,6 +282,7 @@ body {
   @include flex(column-reverse, center, center);
   margin: 3.5rem 0;
   background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+  border: 1px solid lightgray;
 
   @media (min-width: $largeWidth) {
     @include flex(row, center, space-between);
@@ -305,7 +309,7 @@ body {
 }
 
 .photo__wrapper {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   line-height: 0;
 
@@ -341,8 +345,12 @@ body {
 }
 
 /* about us */
-.about-us {
+.section {
   margin-bottom: 5.5rem;
+
+  @media (min-width: $mediumWidth) {
+    margin-bottom: 8.5rem;
+  }
 }
 
 .section-title {
@@ -350,6 +358,8 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
   text-align: center;
+  background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+  border: 1px solid lightgray;
 
   @media (min-width: $largeWidth) {
     font-size: 4.5rem;
@@ -411,5 +421,45 @@ p {
   text-align: center;
   @media (min-width: $largeWidth) {
     text-align: left;
+  }
+}
+
+.section-list {
+  list-style: none;
+  text-align: left;
+  padding-left: 1.5rem;
+
+  li {
+    padding-left: 3rem;
+    position: relative;
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border: 1px solid $blackColor;
+      background: lightgray;
+      position: absolute;
+      top: 25%;
+      left: 0;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border: 1px solid lightgray;
+      background: $blackColor;
+      position: absolute;
+      top: 40%;
+      left: 3.5px;
+      z-index: 0;
+      display: none;
+      @media (min-width: $mediumWidth) {
+        display: block;
+      }
+    }
+  }
+  @media (min-width: $mediumWidth) {
+    padding: 0;
   }
 }
