@@ -38,9 +38,31 @@ function showHamburgerMenu() {
   hamburger.addEventListener('click', handleClick);
 }
 
+function showAnswer() {
+  const buttons = document.querySelectorAll('.path__btn');
+  
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      let panel = this.nextElementSibling;
+
+      if(panel.style.display === 'block') {
+        panel.style.display = 'none';
+        this.setAttribute('aria-expanded', 'false');
+        this.firstElementChild.classList.remove('fa-caret-up');
+        this.firstElementChild.classList.add('fa-caret-down');
+      } else {
+        panel.style.display = 'block';
+        this.setAttribute('aria-expanded', 'true');
+        this.firstElementChild.classList.add('fa-caret-up');
+      }
+    })
+  }
+}
+
 const init = function () {
   changeTitle();
   showHamburgerMenu();
+  showAnswer();
 };
 
 document.addEventListener('DOMContentLoaded', init);

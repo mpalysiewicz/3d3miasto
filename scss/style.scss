@@ -380,7 +380,7 @@ body {
   }
 }
 
-.text__wrapper {
+.text-wrapper {
   width: 100%;
   height: 100%;
   margin: auto 0;
@@ -576,6 +576,32 @@ p {
     margin-right: 1.5rem;
   }
 }
+
+/* paths */
+.paths__list {
+  list-style: none;
+  padding: 0;
+}
+
+.path__btn {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  background: lightgray;
+  margin: 1.5rem 0;
+  transition: background 0.2s;
+  
+  &:hover,
+  &:focus {
+    background: $whiteColor;
+  }
+}
+
+.path__sect {
+  display: none;
+  padding: 1rem;
+}
+
 
 /* buy ticket */ 
 .buy-ticket__wrapper {
