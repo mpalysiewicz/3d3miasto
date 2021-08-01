@@ -541,7 +541,7 @@ p {
 
 /* legend */
 .legend {
-  padding: 4.5rem 0;
+  padding: 4.5rem 0 2.5rem;
 }
 
 .legend__title {
@@ -574,5 +574,50 @@ p {
 
   img {
     margin-right: 1.5rem;
+  }
+}
+
+/* buy ticket */ 
+.buy-ticket__wrapper {
+  text-align: center;
+}
+
+.button-wrapper {
+  max-width: 300px;
+  margin: 4.5rem auto;
+}
+
+.button {
+  display: block;
+  text-decoration: none;
+  color: $blackColor;
+  background: $whiteColor;
+  padding: 2rem 3.5rem;
+  border: 1px solid $blackColor;
+  text-transform: uppercase;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid $blackColor;
+    background-image: repeating-linear-gradient(-45deg, $blackColor 0, $blackColor 20px, transparent 20px, transparent 40px);
+    position: absolute;
+    bottom: -10.5%;
+    right: -2.5%;
+    z-index: -1;
+    transition: all 0.2s;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    bottom: -11.5%;
+    right: -3.5%;
   }
 }
