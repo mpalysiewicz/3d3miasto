@@ -625,7 +625,7 @@ p {
 
   &:hover,
   &:focus {
-    background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+    background: lightgray;
   }
 
   &::before {
