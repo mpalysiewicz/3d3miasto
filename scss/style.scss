@@ -653,3 +653,29 @@ p {
   font-style: normal;
   padding: 2.5rem 0;
 }
+
+/* footer */
+.footer {
+  padding: 2rem 0;
+  background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+  border: 1px solid lightgray;
+}
+
+.footer__wrapper {
+  @include flex(column, center, center);
+  font-size: 1.6rem;
+  text-align: center;
+
+  a {
+    color: $blackColor;
+    &:hover,
+    &:focus {
+      background: $whiteColor;
+    }
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    @include flex(row, center, space-between);
+    text-align: left;
+  }
+}
