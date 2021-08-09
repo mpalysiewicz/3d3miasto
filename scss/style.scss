@@ -38,6 +38,15 @@ body {
   }
 }
 
+a {
+  color: $blackColor;
+  &:hover,
+  &:focus {
+    color: $blackColor;
+    background: $whiteColor;
+  }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -118,20 +127,18 @@ body {
 
 .logo {
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
 }
 
 .info {
   text-align: left;
   line-height: 1.5;
   font-weight: 300;
-  a {
-    color: $blackColor;
-    &:hover,
-    &:focus {
-      color: $blackColor;
-      background: $whiteColor;
-    }
-  }
+
   @media (min-width: $mediumWidth) {
     text-align: center;
   }
@@ -393,12 +400,9 @@ body {
 }
 
 p {
-  padding: 0 1.5rem;
+  padding: 0;
   font-weight: 400;
   line-height: 2.6rem;
-  @media (min-width: $largeWidth) {
-    padding: 0;
-  }
 }
 
 .padding--left {
@@ -424,15 +428,21 @@ p {
     position: relative;
     &::before {
       content: "";
-      width: 15px;
-      height: 15px;
-      border: 1px solid $blackColor;
+      width: 10px;
+      height: 10px;
+      border: 2px solid $blackColor;
       background: lightgray;
       position: absolute;
       top: 25%;
       left: 0;
       z-index: 1;
+      @media (min-width: $mediumWidth) {
+        width: 15px;
+        height: 15px;
+        border: 1px solid $blackColor;
+      }
     }
+
     &::after {
       content: "";
       width: 15px;
@@ -449,6 +459,7 @@ p {
       }
     }
   }
+
   @media (min-width: $mediumWidth) {
     padding: 0;
   }
@@ -515,18 +526,17 @@ p {
 
 .speaker__social-icons {
   text-align: center;
+  @include flex(row, center, center);
 
   a {
+    width: 30px;
+    height: 30px;
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.9);
     text-decoration: none;
     transition: color 0.2s;
     margin-right: 0.5rem;
-
-    &:hover,
-    &:focus {
-      color: rgba(0, 0, 0, 1);
-    }
+    @include flex(row, center, center);
   }
 
   @media screen and (min-width: $largeWidth) {
@@ -542,6 +552,10 @@ p {
   text-align: center;
 
   @media (min-width: $mediumWidth) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $largeWidth) {
     font-size: 5rem;
     text-align: left;
   }
@@ -550,7 +564,7 @@ p {
 .program__item {
   @include flex(column, flex-start, center);
 
-  @media (min-width: $mediumWidth) {
+  @media (min-width: $largeWidth) {
     @include flex(row, flex-start, space-between);
   }
 }
@@ -560,7 +574,7 @@ p {
   @include flex(row, center, center);
   padding: 1rem 0;
 
-  @media (min-width: $mediumWidth) {
+  @media (min-width: $largeWidth) {
     width: 30%;
     @include flex(row, center, flex-start);
   }
@@ -568,7 +582,7 @@ p {
 
 .icon {
   margin-right: 1.5rem;
-  @media (min-width: $mediumWidth) {
+  @media (min-width: $largeWidth) {
     margin-right: 2.5rem;
   }
 }
@@ -609,11 +623,11 @@ p {
     top: 0;
     left: -5px;
     display: none;
-    @media (min-width: $mediumWidth) {
+    @media (min-width: $largeWidth) {
       display: block;
     }
   }
-  @media (min-width: $mediumWidth) {
+  @media (min-width: $largeWidth) {
     width: 70%;
     padding: 0 0 1rem 2.5rem;
   }
@@ -728,21 +742,33 @@ p {
   }
 }
 
-.rules {
-  a {
-    color: $blackColor;
+/* place */
+.place__items {
+  @include flex(column, flex-start, center);
 
-    &:hover,
-    &:focus {
-      background: $whiteColor;
-    }
+  @media (min-width: $largeWidth) {
+    @include flex(row, flex-start, space-between);
   }
 }
 
-/* place */
+.place__item {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: $largeWidth) {
+    width: 50%;
+  }
+}
+
+.place__title {
+  font-weight: 500;
+  margin: 0;
+}
+
+
 .address {
   font-style: normal;
-  padding: 2.5rem 0;
+  margin-bottom: 1.5rem;
 }
 
 /* footer */
@@ -756,14 +782,6 @@ p {
   @include flex(column, center, center);
   font-size: 1.6rem;
   text-align: center;
-
-  a {
-    color: $blackColor;
-    &:hover,
-    &:focus {
-      background: $whiteColor;
-    }
-  }
 
   @media screen and (min-width: $largeWidth) {
     @include flex(row, center, space-between);
