@@ -59,10 +59,29 @@ function showAnswer() {
   }
 }
 
+function showPhoto() {
+  const photos = document.querySelectorAll(".photo");
+
+  for (let i = 0; i < photos.length; i++) {
+      photos[i].addEventListener("click", function() {
+          const modal = this.querySelector(".modal");
+
+          this.querySelector(".modal").classList.toggle("show-modal");
+
+          window.addEventListener("click", function(e) {
+              if (e.target == modal) {
+                  modal.classList.toggle("show-modal");
+              }
+          })
+      })
+  }
+}
+
 const init = function () {
   changeTitle();
   showHamburgerMenu();
   showAnswer();
+  showPhoto();
 };
 
 document.addEventListener('DOMContentLoaded', init);

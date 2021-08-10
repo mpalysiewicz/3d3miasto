@@ -822,10 +822,72 @@ p {
   margin: 0;
 }
 
-
 .address {
   font-style: normal;
   margin-bottom: 1.5rem;
+}
+
+/* gallery */
+.gallery__wrapper {
+  @include flex(column, center, center);
+
+  @media screen and (min-width: $mediumWidth) {
+    @include flex(row, center, space-between);
+    flex-wrap: wrap;
+  }
+}
+
+.photo {
+  width: 100%;
+  transition: transform 0.3s;
+  line-height: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    margin: 0 0.5rem 1.5rem;
+    border: 3px solid lightgray;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $mediumWidth) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    width: 32%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(3, 3, 3, 0.65);
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 900px;
+  max-height: 900px;
+  @include flex(column, center, center);
+  transition: 5s;
+  margin: 1.5rem auto 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border: 3px solid lightgray;
+  }
+}
+
+.show-modal {
+  display: block;
 }
 
 /* fund */
