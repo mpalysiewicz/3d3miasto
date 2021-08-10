@@ -177,6 +177,9 @@ a {
 
   @media (min-width: $mediumWidth) {
     right: 5.8rem;
+    position: relative;
+    top: 0;
+    right: 0;
   }
 }
 
@@ -294,30 +297,32 @@ a {
 
 /* hero */
 .hero {
-  @include flex(column-reverse, center, center);
   margin: 3.5rem 0;
   background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   border: 1px solid lightgray;
+}
+
+.hero__wrapper {
+  @include flex(column-reverse, center, center);
 
   @media (min-width: $largeWidth) {
     @include flex(row, center, space-between);
   }
 }
 
-.hero-title {
+.hero__title {
   width: 100%;
   font-size: 3rem;
   font-weight: 300;
   line-height: 4rem;
-  padding: 2rem;
   text-align: center;
   @media (min-width: $mediumWidth) {
-    font-size: 6rem;
+    font-size: 4rem;
     line-height: 6rem;
   }
   @media (min-width: $largeWidth) {
     width: 50%;
-    font-size: 8rem;
+    font-size: 6rem;
     line-height: 8rem;
     text-align: left;
   }
@@ -555,6 +560,24 @@ p {
 
 .speaker__description {
   padding: 0;
+  background: lightgray;
+  border: 1px solid lightgray;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
+    position: absolute;
+    bottom: -5.5%;
+    right: -1.5%;
+    z-index: -1;
+    display: none;
+    @media (min-width: $mediumWidth) {
+      display: block;
+    }
+  }
 }
 
 .speaker__social-icons {
@@ -802,6 +825,72 @@ p {
 .address {
   font-style: normal;
   margin-bottom: 1.5rem;
+}
+
+/* fund */
+.fund__paragraph {
+  margin: 5.5rem auto 0;
+  text-align: center;
+
+  &--first {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $mediumWidth) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &--second {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem 0 5.5rem;
+
+    @media screen and (min-width: $mediumWidth) {
+      font-size: 4.5rem;
+    }
+  }
+}
+
+.fund__partners {
+  @include flex(column, center, center);
+
+  @media screen and (min-width: $mediumWidth) {
+    @include flex(row, flex-start, space-between);
+  }
+}
+
+.fund__partner {
+  font-size: 1.6rem;
+  line-height: 2;
+  text-transform: uppercase;
+  @include flex(column, flex-start, flex-start);
+  margin-bottom: 1.5rem;
+
+  p {
+    width: 100%;
+    text-align: center;
+  }
+
+  a {
+    min-width: 250px;
+    padding: 1rem;
+    background: $whiteColor;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include flex(row, center, center);
+    border: 2px solid lightgray;
+
+    &:hover, 
+    &:focus {
+      border: 2px solid $blackColor;
+    }
+  }
 }
 
 /* footer */
