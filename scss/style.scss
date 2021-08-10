@@ -159,7 +159,11 @@ a {
   padding: 0;
   z-index: 6;
   cursor: pointer;
+  -webkit-transition: visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  transition: visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  -o-transition: transform .3s .1s ease-in-out, visibility 0s .4s;
   transition: transform .3s .1s ease-in-out, visibility 0s .4s;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
   position: absolute;
   top: 3.8rem;
   right: 3.8rem;
@@ -197,7 +201,11 @@ a {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: background-color 0.1s 0.2s ease-in-out;
+  -o-transition: background-color 0.1s 0.2s ease-in-out;
   transition: background-color 0.1s 0.2s ease-in-out;
 
   &::before,
@@ -208,7 +216,11 @@ a {
     background-color: $whiteColor;
     position: absolute;
     left: 0;
+    -webkit-transition: -webkit-transform 0.2s 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s 0.2s ease-in-out;
+    -o-transition: transform 0.2s 0.2s ease-in-out;
     transition: transform 0.2s 0.2s ease-in-out;
+    transition: transform 0.2s 0.2s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out;
   }
 
   &::before {
@@ -226,11 +238,15 @@ a {
     background-color: transparent;
 
     &::before {
-      transform: translateY(10px) rotate(45deg);
+      -webkit-transform: translateY(10px) rotate(45deg);
+          -ms-transform: translateY(10px) rotate(45deg);
+              transform: translateY(10px) rotate(45deg);
     }
 
     &::after {
-      transform: translateY(-10px) rotate(-45deg);
+      -webkit-transform: translateY(-10px) rotate(-45deg);
+          -ms-transform: translateY(-10px) rotate(-45deg);
+              transform: translateY(-10px) rotate(-45deg);
     }
   }
 }
@@ -244,9 +260,15 @@ a {
   top: 0;
   left: 0;
   visibility: hidden;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   z-index: 5;
+  -webkit-transition: visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  transition: visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
+  -o-transition: transform .3s .1s ease-in-out, visibility 0s .4s;
   transition: transform .3s .1s ease-in-out, visibility 0s .4s;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s, -webkit-transform .3s .1s ease-in-out;
 }
 
 .navigation__list {
@@ -281,6 +303,7 @@ a {
     content: "";
     width: 100%;
     height: 100%;
+    background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
     background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
     position: absolute;
     top: 0;
@@ -290,14 +313,21 @@ a {
 }
 
 .navigation--active {
-  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: visibility 0s 0s, -webkit-transform .3s .1s ease-in-out;
+  transition: visibility 0s 0s, -webkit-transform .3s .1s ease-in-out;
+  -o-transition: transform .3s .1s ease-in-out, visibility 0s 0s;
   transition: transform .3s .1s ease-in-out, visibility 0s 0s;
+  transition: transform .3s .1s ease-in-out, visibility 0s 0s, -webkit-transform .3s .1s ease-in-out;
   visibility: visible;
 }
 
 /* hero */
 .hero {
   margin: 3.5rem 0;
+  background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   border: 1px solid lightgray;
 }
@@ -368,6 +398,7 @@ a {
     width: 100%;
     height: 100%;
     border: 1px solid lightgray;
+    background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
     background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
     position: absolute;
     bottom: -2.5%;
@@ -391,6 +422,7 @@ a {
   line-height: 1.5;
   font-weight: 400;
   text-align: center;
+  background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   border: 1px solid lightgray;
 
@@ -569,6 +601,7 @@ p {
     width: 100%;
     height: 100%;
     border: 1px solid lightgray;
+    background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
     background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
     position: absolute;
     bottom: -5.5%;
@@ -591,6 +624,8 @@ p {
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.9);
     text-decoration: none;
+    -webkit-transition: color 0.2s;
+    -o-transition: color 0.2s;
     transition: color 0.2s;
     margin-right: 0.5rem;
     @include flex(row, center, center);
@@ -659,6 +694,7 @@ p {
       width: 100%;
       height: 100%;
       border: 1px solid lightgray;
+      background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
       background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
       position: absolute;
       bottom: -15.5%;
@@ -704,7 +740,8 @@ p {
 
 .legend__boxes {
   @include flex(row, flex-start, space-between);
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .legend__box {
@@ -740,6 +777,8 @@ p {
   border: 1px solid lightgray;
   background: lightgray;
   margin: 1.5rem 0;
+  -webkit-transition: background 0.2s;
+  -o-transition: background 0.2s;
   transition: background 0.2s;
   
   &:hover,
@@ -784,11 +823,14 @@ p {
     width: 100%;
     height: 100%;
     border: 1px solid $blackColor;
+    background-image: -o-repeating-linear-gradient(135deg, $blackColor 0, $blackColor 20px, transparent 20px, transparent 40px);
     background-image: repeating-linear-gradient(-45deg, $blackColor 0, $blackColor 20px, transparent 20px, transparent 40px);
     position: absolute;
     bottom: -10.5%;
     right: -2.5%;
     z-index: -1;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
 
@@ -833,13 +875,18 @@ p {
 
   @media screen and (min-width: $mediumWidth) {
     @include flex(row, center, space-between);
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .photo {
   width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   line-height: 0;
 
   img {
@@ -876,6 +923,8 @@ p {
   max-width: 900px;
   max-height: 900px;
   @include flex(column, center, center);
+  -webkit-transition: 5s;
+  -o-transition: 5s;
   transition: 5s;
   margin: 1.5rem auto 0;
 
@@ -940,7 +989,39 @@ p {
   }
 
   a {
-    min-width: 250px;
+    width: 250px;
+    padding: 1rem;
+    background: $whiteColor;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include flex(row, center, center);
+    border: 2px solid lightgray;
+
+    &:hover, 
+    &:focus {
+      border: 2px solid $blackColor;
+    }
+  }
+}
+
+/* partners */
+.partners__wrapper {
+  @include flex (column, center, center);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  @media screen and (min-width: $mediumWidth) {
+    @include flex (row, center, space-between);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.partners__item {
+
+  a {
+    width: 250px;
     padding: 1rem;
     background: $whiteColor;
     text-decoration: none;
@@ -959,6 +1040,7 @@ p {
 /* footer */
 .footer {
   padding: 2rem 0;
+  background-image: -o-repeating-linear-gradient(135deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   background-image: repeating-linear-gradient(-45deg, lightgray 0, lightgray 20px, transparent 20px, transparent 40px);
   border: 1px solid lightgray;
 }
