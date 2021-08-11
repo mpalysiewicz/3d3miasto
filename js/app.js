@@ -63,17 +63,18 @@ function showPhoto() {
   const photos = document.querySelectorAll(".photo");
 
   for (let i = 0; i < photos.length; i++) {
-      photos[i].addEventListener("click", function() {
-          const modal = this.querySelector(".modal");
+    photos[i].addEventListener("click", function(e) {
+      e.preventDefault();
+      const modal = this.querySelector(".modal");
 
-          this.querySelector(".modal").classList.toggle("show-modal");
+      this.querySelector(".modal").classList.toggle("show-modal");
 
-          window.addEventListener("click", function(e) {
-              if (e.target == modal) {
-                  modal.classList.toggle("show-modal");
-              }
-          })
+      window.addEventListener("click", function(e) {
+        if (e.target == modal) {
+          modal.classList.toggle("show-modal");
+        }
       })
+    })
   }
 }
 
