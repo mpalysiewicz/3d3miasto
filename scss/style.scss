@@ -139,7 +139,7 @@ a {
   @include flex(column, flex-start, flex-start);
 
   @media (min-width: $mediumWidth) {
-    @include flex(row, center, space-between);
+    @include flex(row, flex-start, space-between);
   }
 }
 
@@ -299,7 +299,7 @@ a {
   position: relative;
   padding: 0.5rem 1.5rem;
   font-weight: 300;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   line-height: 3.38rem;
   z-index: 0;
   border: 1px solid transparent;
@@ -321,6 +321,10 @@ a {
     top: 0;
     left: 0;
     z-index: -1;
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    font-size: 2.4rem;
   }
 }
 
@@ -385,7 +389,7 @@ a {
 .hero__link {
   text-decoration: none;
   color: $blackColor;
-  background: $whiteColor;
+  background: #f0f0f0;
   padding: 1rem 3.5rem;
   border: 2px solid $blackColor;
   text-transform: uppercase;
@@ -393,7 +397,7 @@ a {
 
   &:hover,
   &:focus {
-    background: #f0f0f0;
+    background: $whiteColor;
   }
 
   &:focus {
