@@ -366,6 +366,12 @@ a {
     padding-bottom: 0;
     text-align: left;
   }
+
+  &--subpages {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+  }
 }
 
 .hero__title {
@@ -383,6 +389,10 @@ a {
     font-size: 6rem;
     line-height: 8rem;
     margin: 0 0 3.5rem;
+  }
+
+  &--subpages {
+    margin: 2rem 0;
   }
 }
 
