@@ -1,98 +1,570 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>3D3Miasto - Ścieżki warsztatowe</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <script src="../js/app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>3D3Miasto - Ścieżki warsztatowe</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.min.css">
-  <script src="../js/app.js"></script>
-</head>
+  <body>
+    <a href="#main" class="skip-link wrapper">Przejdź do treści</a>
 
-<body>
-  <a href="#main" class="skip-link wrapper">Przejdź do treści</a>
-  
-  <h1 class="sr-only">3D3Miasto</h1>
+    <h1 class="sr-only">3D3Miasto</h1>
 
-  <header class="header" id="header">
-    <div class="header__wrapper wrapper">
-      <a href="/" class="logo">
-        <img src="../img/logo.png" alt="3D3Miasto - strona główna" width="93" height="111" />
-      </a>
-      <div class="info">
-        <p>
-          Termin: 16-17.10.2021
-          <br />E-mail: <a href="mailto:cumy.stocznia@gmail.com">cumy.stocznia@gmail.com</a>
-          <br />Telefon: <a href="tel:512837572">512 837 572</a>
-        </p>
+    <header class="header" id="header">
+      <div class="header__wrapper wrapper">
+        <a href="/" class="logo">
+          <img
+            src="../img/logo.png"
+            alt="3D3Miasto - strona główna"
+            width="93"
+            height="111"
+          />
+        </a>
+        <div class="info">
+          <p>
+            Termin: 16-17.10.2021
+            <br />E-mail:
+            <a href="mailto:cumy.stocznia@gmail.com">cumy.stocznia@gmail.com</a>
+            <br />Telefon: <a href="tel:512837572">512 837 572</a>
+          </p>
+        </div>
+        <nav class="nav">
+          <button class="hamburger" aria-expanded="false">
+            <span class="sr-only">Otwórz/zamknij menu</span>
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="../index.html" class="navigation__link">
+                  Strona główna
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="speakers.html" class="navigation__link">
+                  Prelegenci
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link"> Ścieżki warsztatowe </a>
+              </li>
+              <li class="navigation__item">
+                <a href="partners.html" class="navigation__link"> Partnerzy </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="https://3d3miasto.konfeo.com/pl/groups"
+                  target="_blank"
+                  class="navigation__link"
+                >
+                  Kup bilet <span class="sr-only">otwórz w nowej karcie</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="nav">
-        <button class="hamburger" aria-expanded="false">
-          <span class="sr-only">Otwórz/zamknij menu</span>
-          <span class="hamburger__box">
-            <span class="hamburger__inner"></span>
-          </span>
-        </button>
-        <div class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="../index.html" class="navigation__link">
-                Strona główna
-              </a>
+    </header>
+    <main id="main">
+      <section class="hero section">
+        <div class="hero__wrapper wrapper">
+          <div class="hero__text-wrapper hero__text-wrapper--subpages">
+            <h2 class="hero__title hero__title--subpages">
+              Ścieżki warsztatowe
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="paths__wrapper wrapper">
+          <ul class="paths__list">
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect1"
+                class="path__btn"
+                id="path__btn1"
+              >
+                Wprowadzenie do skanowania 3D
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small>16.10 (sobota).</h3>
+                <h3>
+                  <small>Ile: </small>Grupy do 20 osób. Czas trwania 4 x po 2h.
+                </h3>
+                <h3><small>Prowadzący: </small>Tomasz Janawa</h3>
+                <h3><small>Poziom: </small>Podstawowy</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Podczas warsztatów dotyczących skanowania 3D będziemy chcieli
+                  pokazać proces skanowania od przygotowania obiektu do
+                  skanowania aż do uzyskania jego cyfrowej wersji. W pierwszym
+                  kroku zajmiemy się kalibracją sprzętu pod kątem parametrów
+                  skanowania pod dany model. Następnie pokażemy proces
+                  skanowania 3D oraz obróbki skanu do zapisania w jednym z
+                  możliwych formatów do druku 3D. Zeskanowane zostaną dwa modele
+                  – jeden w technologii skanowania stacjonarnego oraz drugi w
+                  opcji skanowania ręcznego.
+                </p>
+              </article>
             </li>
-            <li class="navigation__item">
-              <a href="speakers.html" class="navigation__link">
-                Prelegenci
-              </a>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Rekonstrukcja maszyn według rysunków Fishera
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3><small>Poziom: </small>średniozaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Ta ścieżka warsztatowa przeznaczona jest dla ludzi z
+                  podstawową wiedzą z zakresu projektowania i druku 3D. W
+                  trakcie warsztatów skupisz się na rozwoju warsztatu i poznaniu
+                  nowych narzędzi, które umożliwią stworzenie modelu od podstaw,
+                  na podstawie rysunku lub szkicu obiektu.
+                </p>
+                <p>
+                  Za podstawę warsztatów otrzymasz szkic maszyny, utrwalony
+                  przez Christiana Gabriela Fischera, znanego gdańskiego
+                  podróżnika i odkrywcy. W swoich dziennikach zawarł on wiele
+                  rycin ciekawych mechanizmów, które będziemy odtwarzać.
+                </p>
+              </article>
             </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">
-                Ścieżki warsztatowe
-              </a>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Rekonstrukcja maszyn Heweliusza - polemoskop
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3><small>Poziom: </small>Podstawowy</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  To ścieżka przede wszystkim dla osób zaczynających swoją
+                  zabawę z drukiem i projektowaniem 3D. Jako uczestnik
+                  zaprojektujesz i zbudujesz działającą replikę polemoskopu.
+                </p>
+                <p>
+                  Krok po kroku, przeniesiesz pomysł na model wirtualny, a
+                  następnie na rzeczywistą konstrukcję, pokonując przy tym
+                  szereg przeszkód. Ta ścieżka pozwoli Ci przede wszystkim na
+                  nauczenie się pracy z programami do modelowania i
+                  rozwiązywania podstawowych problemów przy druku własnych
+                  modeli.
+                </p>
+                <p>
+                  Sam polemoskop to stosunkowo proste, ale ważne historycznie
+                  narzędzie optyczne. Zaprojektowane przez samego Jana
+                  Heweliusza, gdańskiego astronoma i konstruktora przyrządów
+                  naukowych, wzięło nawet udział w Bitwie pod Wiedniem. Jeśli
+                  więc jesteś popularyzatorem nauki, lokalnym patriotą lub
+                  fascynatem historii, to na tej ścieżce zyskasz podwójnie.
+                </p>
+              </article>
             </li>
-            <li class="navigation__item">
-              <a href="partners.html" class="navigation__link">
-                Partnerzy
-              </a>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Skanowanie i inżynieria odwrotna
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: 4 grupy po 2h</small></h3>
+                <h3><small>Prowadzący: </small>Szymon Staszczak</h3>
+                <h3><small>Poziom: </small>średniozaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  To ścieżka przede wszystkim dla ludzi, którzy chcą znacząco
+                  podnieść swój warsztat. Jest bardzo intensywna i naładowana
+                  specjalistyczną wiedzą, obejmującą szereg technik kluczowych
+                  dla inżynierii wstecznej brył 3D.
+                </p>
+                <p>
+                  Jako uczestnik dowiesz się jak prawidłowo przygotować obiekty
+                  do skanowania 3D, a następnie jak je zeskanować, żeby nadawały
+                  się do dalszej pracy. Ścieżka przemyślana jest z myślą o
+                  pokazaniu realnych problemów i skupia się na ich praktycznym
+                  rozwiązywaniu. Po przygotowaniu modelu przyjdzie czas na
+                  przygotowanie drukarki 3D i wydruk, ale na tym proces się nie
+                  zakończy. Po wydruku zostaną omówione i zaprezentowane
+                  niezbędne prace wykończeniowe.
+                </p>
+                <p>
+                  Efektem warsztatów ma być wierna kopia obiektu wyjściowego, a
+                  Ty jako warsztatowicz otrzymasz ogromną porcję wiedzy i
+                  poświadczający ją certyfikat uczestnictwa.
+                </p>
+              </article>
             </li>
-            <li class="navigation__item">
-              <a href="https://3d3miasto.konfeo.com/pl/groups" target="_blank" class="navigation__link">
-                Kup bilet <span class="sr-only">otwórz w nowej karcie</span>
-              </a>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Projektowanie lampy stoczniowej
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small>Piotr Arułkowicz</h3>
+                <h3><small>Poziom: </small>średniozaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Ta ścieżka przeznaczona jest dla fanów dobrego designu. Na
+                  warsztat weźmiemy słynną już lampę stoczniową ORP 2. Obróbkę
+                  tej kultowej już lampy zaczniemy od wiernego skanu 3D, który
+                  pozwoli na przeniesienie jej formy do komputera.
+                </p>
+                <p>
+                  Z tak przygotowanym modelem zasiądziemy do pracy w programach
+                  do modelowania, gdzie dokonamy obróbki i przeróbki modelu
+                  według własnych pomysłów. Na tych warsztatach zobaczysz jak
+                  można twórczo przetworzyć formę zastaną w unikalną
+                  interpretację. Stworzenie mniejszej reprodukcji lampy
+                  imitującej wykonanie z metalu? A może ażurowa wersja ze
+                  sklejki, z elementami montażowymi wydrukowanymi w 3D? Te
+                  warsztaty stwarzają nowe możliwości...
+                </p>
+              </article>
+            </li>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Maintenance i modyfikacje drukarek 3d
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3><small>Poziom: </small>podstawowy i średniozaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  To warsztaty przeznaczone dla każdego, kto druku 3D chce
+                  liznąć od technicznej strony. Przewidziane są dwa poziomy
+                  zaawansowania, ale oba równie intensywne. Poziom pierwszy
+                  przeznaczony jest dla osób początkujących. Wybierz go jeśli
+                  chcesz poznać podstawy pracy drukarki. Nie wiesz jak ją
+                  zmontować? Masz problemy z drukiem, ale nie wiesz jak je
+                  szybko rozpoznawać i likwidować? A może problemem jest
+                  codzienna eksploatacja lub wybór materiału? Zacznij tutaj!
+                </p>
+                <p>
+                  Ścieżka średniozaawansowana jest dla Ciebie jeśli jednak masz
+                  już drukarkę, potrafisz ją obsłużyć, ale czujesz niedosyt. Nic
+                  nie doprowadza Cię do szału jak głośność drukarki? Dowiesz się
+                  jak wymienić silniki krokowe lub płytę główną. Chcesz poprawić
+                  prędkość pracy lub jakość wydruku? Dowiesz się jak wymienić
+                  ekstruder i dobrać chłodzenie. Jesteś freakiem kontroli i
+                  chcesz mieć większą władzę nad drukarką? Dowiesz się czym jest
+                  Octoprint i jak wgrać Marlina. A może coś się zepsuło i chcesz
+                  to naprawić? Na warsztatach wskrzesimy kilka drukarkowych
+                  trupów i podrasujemy działające już maszyny.
+                </p>
+              </article>
+            </li>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                “Metody szybkiego prototypowania” - SKALP
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3><small>Poziom: </small>zaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Ta ścieżka przeznaczona jest dla ludzi, którzy mają już
+                  teoretyczną wiedzę o projektowaniu. Jest to ścieżka dla Ciebie
+                  jeśli jesteś studiujesz lub ukończyłeś/ukończyłaś studia
+                  techniczne.
+                </p>
+                <p>
+                  W trakcie warsztatów poznasz metody szybkiego prototypowania
+                  oraz poznasz przydatne narzędzia, właściwe do wybranej metody.
+                  Biorąc udział w tej ścieżce warsztatowej poznasz także ich
+                  słabe i mocne strony, co pomoże Ci dobrać technikę właściwą do
+                  zadania. Zobaczysz też dużo przykładów - zarówno tych bardzo
+                  dobrych jak i bardzo złych zastosowań ;)
+                </p>
+              </article>
+            </li>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Wykorzystanie druku 3D do prototypowania części robotów
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3><small>Poziom: </small>zaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Ta ścieżka przeznaczona jest dla ludzi, którzy mają już
+                  teoretyczną wiedzę o projektowaniu. Jest to ścieżka dla Ciebie
+                  jeśli jesteś studiujesz lub ukończyłeś/ukończyłaś studia
+                  techniczne.
+                </p>
+                <p>
+                  Warsztaty skupiają się na dobraniu właściwej metody oraz
+                  materiałów do druku prototypowanych elementów. Poznasz
+                  zastosowania technologii takich jak FDM, SLA, SLS i DLP, a
+                  także ich przewagi i słabe strony. Dowiesz się także wiele na
+                  temat ich odporności chemicznej i mechanicznej, w tym
+                  wytrzymałości w porównaniu do stali konstrukcyjnej czy
+                  aluminium. W trakcie zajęć dowiesz się także jak na
+                  wytrzymałość druku wpływają różne metody wypełnienia czy
+                  postobróbki części.
+                </p>
+                <p>
+                  Warsztaty nastawione są na wiedzę praktyczną. Dzięki nim
+                  zyskasz bardzo konkretną wiedzę na temat tolerancji druku oraz
+                  patentów na obejście ograniczeń. Oznacza to także omawianie
+                  konkretnych wydruków i dyskusje o ich wadach i możliwych
+                  poprawkach.
+                </p>
+              </article>
+            </li>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Projektowanie zabawek - printed-toys.com
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small>Adam Bugiel</h3>
+                <h3><small>Poziom: </small>podstawowy i średniozaawansowany</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Ścieżka przeznaczona nie tylko dla rodziców, ale także dla
+                  nauczycieli, młodzieży, a nawet dzieci, które są
+                  zainteresowane tematyką druku 3D. Warsztaty podzielone zostały
+                  na dwa stopnie zaawansowania i obejmują podstawy projektowania
+                  i druku 3D.
+                </p>
+                <p>
+                  Uczestnicząc w tych warsztatach dowiesz się jak stworzyć lub
+                  poprawić gotowy model zabawki lub materiałów edukacyjnych. Nie
+                  tylko poznasz podstawy dobrego druku 3D w warunkach domowych,
+                  ale także ciekawe zastosowania druku w edukacji. Warsztaty to
+                  także wstęp do druku domowego i modelarskiego.
+                </p>
+              </article>
+            </li>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Zalety cyfrowego wycisku w codziennej pracy gabinetu - wstęp do
+                cyfrowej stomatologii dla początkujących.
+                <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3>
+                  <small>Poziom: </small>podstawowy i średniozaawansowany
+                  (łączony)
+                </h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  Warsztaty przeznaczone są dla pracowników i pracowniczek
+                  ochrony zdrowia, w tym stomatologów, protetyków i higienistów.
+                  Wymagają one specjalistycznej wiedzy z zakresu protetyki,
+                  która będzie podstawą w trakcie zajęć.
+                </p>
+                <p>
+                  Ta ścieżka ma na celu wprowadzenie do nowoczesnych metod
+                  skanowania jamy ustnej, zastępujących lub uzupełniających
+                  standardowe odciski. W trakcie warsztatów dowiesz się nie
+                  tylko jak przygotować i obrobić skan uzębienia, ale także jak
+                  przygotować i zastosować druk 3D w procesie tworzenia i
+                  naprawy protez.
+                </p>
+              </article>
+            </li>
+            <li>
+              <button
+                aria-expanded="false"
+                aria-controls="path__sect2"
+                class="path__btn"
+                id="path__btn2"
+              >
+                Wyskalowany, zwalidowany druk 3D w stomatologii wsparty
+                procesami AI <span class="fas fa-caret-down path__icon"></span>
+                <span class="btn__frame"></span>
+              </button>
+              <article
+                class="path__sect text-wrapper"
+                id="path__sect1"
+                role="region"
+                aria-labelledby="path__btn1"
+              >
+                <h3><small>Kiedy: </small></h3>
+                <h3><small>Ile: </small></h3>
+                <h3><small>Czas trwania: </small>2 dni</h3>
+                <h3><small>Prowadzący: </small></h3>
+                <h3><small>Poziom: </small>podstawowy</h3>
+                <h3>Dla kogo? Co zyskam?</h3>
+                <p>
+                  W przypadku druku medycznego służącego do zabiegów
+                  chirurgicznych lub postepowań protetycznych mamy do czynienia
+                  z wymogami, które nie są obecne nawet przy precyzyjnym druku
+                  technicznym. Oprócz zachowania skali 1:1, dobrania
+                  odpowiednich parametrów fizycznych rezinów dochodzi jeszcze
+                  aspekt biokompatybilności względem tkanek. Dlatego wymogi
+                  względem drukarek oraz procesów po drukarskich muszą być
+                  zwalidowane czyli przetesowane laboratoryjnie i ściśle
+                  określone. Dopiero wtedy druk 3D spełnia normy względem
+                  materiałów medycznych. Aby procesy drukarskie w takich
+                  warunkach założeniowych nie były wyprawą na Mont Everest druk
+                  może być w spierany przez procesy logistyczne AI (sztucznej
+                  inteligencji) oraz uczenia się maszyn. Jak to się odbywa
+                  przyjdź i zobacz. Tego jeszcze nie było.
+                </p>
+              </article>
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <section class="hero section">
-      <div class="hero__wrapper wrapper">
-        <div class="hero__text-wrapper hero__text-wrapper--subpages">
-          <h2 class="hero__title hero__title--subpages">Ścieżki warsztatowe</h2>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <h2 class="sr-only">Stopka</h2>
-    <div class="footer__wrapper wrapper">
-      <p>
-        &copy; 2021 3D3Miasto
-      </p>
-      <p>
-        Stworzone przez 
-        <a href="https://github.com/usigna" target="_blank">
-          usigna 
-          <span class="sr-only">otwórz w nowej karcie</span>
-        </a>
+    <footer class="footer">
+      <h2 class="sr-only">Stopka</h2>
+      <div class="footer__wrapper wrapper">
+        <p>&copy; 2021 3D3Miasto</p>
+        <p>
+          Stworzone przez
+          <a href="https://github.com/usigna" target="_blank">
+            usigna
+            <span class="sr-only">otwórz w nowej karcie</span>
+          </a>
         </p>
-    </div>
-  </footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
