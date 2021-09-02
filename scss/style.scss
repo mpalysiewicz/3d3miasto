@@ -1204,6 +1204,25 @@ p {
     }
   }
 }
+.video-wrapper {
+  padding: 3.5rem 10%;
+}
+.partners-video {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  margin: 3.5rem auto;
+  position: relative;
+  padding-bottom: calc(var(--aspect-ratio, 0.5625) * 100%);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 /* footer */
 .footer {
