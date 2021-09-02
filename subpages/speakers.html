@@ -1,262 +1,374 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>3D3Miasto - Prelegenci</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <script src="../js/app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>3D3Miasto - Prelegenci</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.min.css">
-  <script src="../js/app.js"></script>
-</head>
+  <body>
+    <a href="#main" class="skip-link wrapper">Przejdź do treści</a>
 
-<body>
-  <a href="#main" class="skip-link wrapper">Przejdź do treści</a>
-  
-  <h1 class="sr-only">3D3Miasto</h1>
+    <h1 class="sr-only">3D3Miasto</h1>
 
-  <header class="header" id="header">
-    <div class="header__wrapper wrapper">
-      <a href="/" class="logo">
-        <img src="../img/logo.png" alt="3D3Miasto - strona główna" width="93" height="111" />
-      </a>
-      <div class="info">
-        <p>
-          Termin: 16-17.10.2021
-          <br />E-mail: <a href="mailto:cumy.stocznia@gmail.com">cumy.stocznia@gmail.com</a>
-          <br />Telefon: <a href="tel:512837572">512 837 572</a>
-        </p>
-      </div>
-      <nav class="nav">
-        <button class="hamburger" aria-expanded="false">
-          <span class="sr-only">Otwórz/zamknij menu</span>
-          <span class="hamburger__box">
-            <span class="hamburger__inner"></span>
-          </span>
-        </button>
-        <div class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="../index.html" class="navigation__link">
-                Strona główna
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">
-                Prelegenci
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="paths.html" class="navigation__link">
-                Ścieżki warsztatowe
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="partners.html" class="navigation__link">
-                Partnerzy
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="https://3d3miasto.konfeo.com/pl/groups" target="_blank" class="navigation__link">
-                Kup bilet <span class="sr-only">otwórz w nowej karcie</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <section class="hero section">
-      <div class="hero__wrapper wrapper">
-        <div class="hero__text-wrapper hero__text-wrapper--subpages">
-          <h2 class="hero__title hero__title--subpages">Prelegenci</h2>
-        </div>
-      </div>
-    </section>
-    <section class="speakers section" id="speakers">
-      <h2 class="section-title">Prelegenci</h2>
-      <div class="speakers__wrapper wrapper">
-        <div class="speakers__items">
-          <div class="speaker">
-            <div class="speaker__photo-wrapper photo-background">
-              <img src="../img/bugiel.jpg" alt="Adam Bugiel" />
-            </div>
-            <div class="speaker__text-wrapper">
-              <h3 class="speaker__title">Adam Bugiel</h3>
-              <p class="speaker__company">Printed-toys</p>
-              <p class="speaker__description">
-                Informatyk i programista, grafik 3D, popularyzator wiedzy technicznej. Prowadzi szkolenia z druku 3D i projektowania modeli. Założyciel sklepu z zabawkami do drukowania oraz projektant wszystkich modeli zamieszczonych w sklepie.
-              </p>
-              <div class="speaker__social-icons">
-                <a href="#" target="_blank" title="Linkedin">
-                  <span class="fab fa-linkedin" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                  <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Github">
-                  <span class="fab fa-github-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__photo-wrapper photo-background">
-              <img src="../img/dyrda.jpg" alt="Mateusz Dyrda" />
-            </div>
-            <div class="speaker__text-wrapper">
-              <h3 class="speaker__title">Mateusz Dyrda</h3>
-              <p class="speaker__company">Stowarzyszenie SKALP</p>
-              <p class="speaker__description">
-                Prezes Stowarzyszenia Robotyków SKALP, konstruktor, robotyk, edukator. Studiował filozofię na Uniwersytecie Gdańskim oraz nanotechnologie na Politechnice Gdańskiej. Organizator konferencji “Kosmos i Roboty”. Członek wielu zespołów pracujących nad pojazdami autonomicznymi i innowacyjnymi produktami w tym autonomicznego robota rolniczego oraz analogu łazika marsjańskiego. Były dyrektor Hubu Innowacji Cyfrowych. Od wielu lat zaangażowany w trójmiejską społeczność fab labów i makerspace’ów. Ze sportów najbardziej lubi wygrywać hackathony i latać dronami wyścigowymi."
-              </p>
-              <div class="speaker__social-icons">
-                <a href="#" target="_blank" title="Linkedin">
-                  <span class="fab fa-linkedin" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                  <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Github">
-                  <span class="fab fa-github-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__photo-wrapper photo-background">
-              <img src="../img/bunny.jpg" alt="Dawid Mościcki" />
-            </div>
-            <div class="speaker__text-wrapper">
-              <h3 class="speaker__title">Dawid Mościcki</h3>
-              <p class="speaker__company">Stowarzyszenie SKALP</p>
-              <p class="speaker__description">
-                Student Automatyki i Robotyki na Politechnice Gdańskiej, robotyk, automatyk, projektant, zapalony użytkownik drukarek 3D i fanatyk atmeg. Uwielbia wykorzystywać rzeczy znalezione w śmieciach do swoich projektów, zachwalać 8bitowe mikroprocesory i zbierać punkty karne. Do projektów zazwyczaj siada maksymalnie dzień przed deadlinem i zarywa noce. Angażuje się w Stowarzyszeniu Robotyków SKALP, uczestniczy w projekcie duckietown budując autonomiczne minisamochody oraz pracuje nad własnym ramieniem robotycznym. Czasami pyka w siatkę i pójdzie się powspinać.
-              </p>
-              <div class="speaker__social-icons">
-                <a href="#" target="_blank" title="Linkedin">
-                  <span class="fab fa-linkedin" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                  <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Github">
-                  <span class="fab fa-github-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__photo-wrapper photo-background">
-              <img src="../img/janawa.jpg" alt="Tomasz Janawa" />
-            </div>
-            <div class="speaker__text-wrapper">
-              <h3 class="speaker__title">Tomasz Janawa</h3>
-              <p class="speaker__company">VPI</p>
-              <p class="speaker__description">
-                Posiada 9 letnie doświadczenie w relacjach z klientami biznesowymi w zakresie wsparcia przy wyborze odpowiedniego rozwiązania. Specjalista ds. sprzedaży oraz szkoleń produktów marki Shining 3D. Od kilku lat zajmuje się technologią skanowania 3D do takich zastosowań jak: kontrola jakości, inżynieria odwrotna czy prototypowanie. Prowadzi szkolenia z zakresu skanowania 3D oraz obsługi programów wspomagających.
-              </p>
-              <div class="speaker__social-icons">
-                <a href="#" target="_blank" title="Linkedin">
-                  <span class="fab fa-linkedin" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                  <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Github">
-                  <span class="fab fa-github-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__photo-wrapper photo-background">
-              <img src="../img/staszczak.jpg" alt="Szymon Staszczak" />
-            </div>
-            <div class="speaker__text-wrapper">
-              <h3 class="speaker__title">Szymon Staszczak</h3>
-              <p class="speaker__company">CadExpert</p>
-              <p class="speaker__description">
-                Absolwent kierunku inżynieria materiałowa na Akademii Górniczo-Hutniczej w Krakowie. Zna drukarki 3D od podszewki. Od kilku lat zajmuje się serwisem, instalacją oraz obsługą systemów druku 3D marki Stratasys, MakerBot, Formlabs. Prowadzi szkolenia wdrożeniowe dla firm z obsługi drukarek 3D w technologiach FDM i SLA. Klienci mogą liczyć na jego wsparcie i darmowe konsultacje w zakresie doboru technologii druku oraz materiału do danego zastosowania.
-              </p>
-              <div class="speaker__social-icons">
-                <a href="#" target="_blank" title="Linkedin">
-                  <span class="fab fa-linkedin" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                  <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Github">
-                  <span class="fab fa-github-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__photo-wrapper photo-background">
-              <img src="../img/nowinska.jpg" alt="Agnieszka Nowińska" />
-            </div>
-            <div class="speaker__text-wrapper">
-              <h3 class="speaker__title">Agnieszka Nowińska</h3>
-              <p class="speaker__company">Stomatolog, Protetyk, Chirurg</p>
-              <p class="speaker__description">
-                Jestem absolwentką Pomorskiego Uniwersytetu Medycznego. Stomatologia to moja pasja. Już w wieku 12 lat wiedziałam, że będę dentystą. Na studiach byłam Prezesem Polskiego Towarzystwa Studentów Stomatologii Oddziału w Szczecinie. Organizowałam ogólnopolskie konferencje dla lekarzy i studentów. Jestem zwolenniczką szkoły niemieckiej, swoim pacjentom zapewniam kompleksowe leczenie, począwszy od wypełnienia, endodoncji, chorób dziąseł i przyzębia, skończywszy na protetyce. Doświadczenie i wiedzę zdobyłam podczas kilkuletniej pracy w klinice w Niemczech. Nieustannie podnoszę swoje kwalifikacje uczestnicząc w różnorodnych szkoleniach zarówno w Polsce, jak i za granicą, w szczególności w Niemczech. Ukończyłam prestiżowe Curiculum Implatologii Cezanne Institut w Berlinie. Pracowałam z wykorzystaniem najwyższej jakości systemów, takich jak Straumann, Schutz oraz Bicon. Na bieżąco wykorzystuję nowinki technologiczne, opanowałam system Cad/Cam. Mam doświadczenie w wykorzystywaniu telemedycyny. Od lat jestem zafascynowana chirurgią. Stale doskonalę techniki zabiegowe uczestnicząc w praktycznych warsztatach u najlepszych specjalistów. Jestem także nauczycielem w szkole dla przyszłych higienistek stomatologicznych. Bardzo lubię przekazywać wiedzę innym.
-
-              </p>
-              <div class="speaker__social-icons">
-                <a href="#" target="_blank" title="Linkedin">
-                  <span class="fab fa-linkedin" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                  <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-                <a href="#" target="_blank" title="Github">
-                  <span class="fab fa-github-square" aria-hidden="true"></span>
-                  <span class="sr-only">otwórz w nowej karcie</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <h2 class="sr-only">Stopka</h2>
-    <div class="footer__wrapper wrapper">
-      <p>
-        &copy; 2021 3D3Miasto
-      </p>
-      <p>
-        Stworzone przez 
-        <a href="https://github.com/usigna" target="_blank">
-          usigna 
-          <span class="sr-only">otwórz w nowej karcie</span>
+    <header class="header" id="header">
+      <div class="header__wrapper wrapper">
+        <a href="/" class="logo">
+          <img
+            src="../img/logo.png"
+            alt="3D3Miasto - strona główna"
+            width="93"
+            height="111"
+          />
         </a>
+        <div class="info">
+          <p>
+            Termin: 16-17.10.2021
+            <br />E-mail:
+            <a href="mailto:cumy.stocznia@gmail.com">cumy.stocznia@gmail.com</a>
+            <br />Telefon: <a href="tel:512837572">512 837 572</a>
+          </p>
+        </div>
+        <nav class="nav">
+          <button class="hamburger" aria-expanded="false">
+            <span class="sr-only">Otwórz/zamknij menu</span>
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="../index.html" class="navigation__link">
+                  Strona główna
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link"> Prelegenci </a>
+              </li>
+              <li class="navigation__item">
+                <a href="paths.html" class="navigation__link">
+                  Ścieżki warsztatowe
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="partners.html" class="navigation__link"> Partnerzy </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="https://3d3miasto.konfeo.com/pl/groups"
+                  target="_blank"
+                  class="navigation__link"
+                >
+                  Kup bilet <span class="sr-only">otwórz w nowej karcie</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero section">
+        <div class="hero__wrapper wrapper">
+          <div class="hero__text-wrapper hero__text-wrapper--subpages">
+            <h2 class="hero__title hero__title--subpages">Prelegenci</h2>
+          </div>
+        </div>
+      </section>
+      <section class="speakers section" id="speakers">
+        <div class="speakers__wrapper wrapper">
+          <div class="speakers__items">
+            <div class="speaker">
+              <h3 class="section-title speaker__title">Adam Bugiel</h3>
+              <div class="speaker-row">
+                <div class="speaker__photo-wrapper photo-background">
+                  <img src="../img/bugiel.jpg" alt="Adam Bugiel" />
+                </div>
+                <div class="speaker__text-wrapper">
+                  <!-- <h3 class="speaker__title"></h3> -->
+                  <p class="speaker__company">Printed-toys</p>
+                  <p class="speaker__description">
+                    Informatyk i programista, grafik 3D, popularyzator wiedzy
+                    technicznej. Prowadzi szkolenia z druku 3D i projektowania
+                    modeli. Założyciel sklepu z zabawkami do drukowania oraz
+                    projektant wszystkich modeli zamieszczonych w sklepie.
+                  </p>
+                  <div class="speaker__social-icons">
+                    <a href="#" target="_blank" title="Linkedin">
+                      <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                      <span
+                        class="fab fa-twitter-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                      <span
+                        class="fab fa-github-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="speaker">
+              <h3 class="section-title speaker__title">Mateusz Dyrda</h3>
+              <div class="speaker-row">
+                <div class="speaker__photo-wrapper photo-background">
+                  <img src="../img/dyrda.jpg" alt="Mateusz Dyrda" />
+                </div>
+                <div class="speaker__text-wrapper">
+                  <p class="speaker__company">Stowarzyszenie SKALP</p>
+                  <p class="speaker__description">
+                    Prezes Stowarzyszenia Robotyków SKALP, konstruktor, robotyk,
+                    edukator. Studiował filozofię na Uniwersytecie Gdańskim oraz
+                    nanotechnologie na Politechnice Gdańskiej. Organizator
+                    konferencji “Kosmos i Roboty”. Członek wielu zespołów
+                    pracujących nad pojazdami autonomicznymi i innowacyjnymi
+                    produktami w tym autonomicznego robota rolniczego oraz
+                    analogu łazika marsjańskiego. Były dyrektor Hubu Innowacji
+                    Cyfrowych. Od wielu lat zaangażowany w trójmiejską
+                    społeczność fab labów i makerspace’ów. Ze sportów
+                    najbardziej lubi wygrywać hackathony i latać dronami
+                    wyścigowymi."
+                  </p>
+                  <div class="speaker__social-icons">
+                    <a href="#" target="_blank" title="Linkedin">
+                      <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                      <span
+                        class="fab fa-twitter-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                      <span
+                        class="fab fa-github-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="speaker">
+              <h3 class="section-title speaker__title">Dawid Mościcki</h3>
+              <div class="speaker-row">
+                <div class="speaker__photo-wrapper photo-background">
+                  <img src="../img/bunny.jpg" alt="Dawid Mościcki" />
+                </div>
+                <div class="speaker__text-wrapper">
+                  <p class="speaker__company">Stowarzyszenie SKALP</p>
+                  <p class="speaker__description">
+                    Student Automatyki i Robotyki na Politechnice Gdańskiej,
+                    robotyk, automatyk, projektant, zapalony użytkownik drukarek
+                    3D i fanatyk atmeg. Uwielbia wykorzystywać rzeczy znalezione
+                    w śmieciach do swoich projektów, zachwalać 8bitowe
+                    mikroprocesory i zbierać punkty karne. Do projektów
+                    zazwyczaj siada maksymalnie dzień przed deadlinem i zarywa
+                    noce. Angażuje się w Stowarzyszeniu Robotyków SKALP,
+                    uczestniczy w projekcie duckietown budując autonomiczne
+                    minisamochody oraz pracuje nad własnym ramieniem
+                    robotycznym. Czasami pyka w siatkę i pójdzie się powspinać.
+                  </p>
+                  <div class="speaker__social-icons">
+                    <a href="#" target="_blank" title="Linkedin">
+                      <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                      <span
+                        class="fab fa-twitter-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                      <span
+                        class="fab fa-github-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="speaker">
+              <h3 class="section-title speaker__title">Tomasz Janawa</h3>
+              <div class="speaker-row">
+                <div class="speaker__photo-wrapper photo-background">
+                  <img src="../img/janawa.jpg" alt="Tomasz Janawa" />
+                </div>
+                <div class="speaker__text-wrapper">
+                  <p class="speaker__company">VPI</p>
+                  <p class="speaker__description">
+                    Posiada 9 letnie doświadczenie w relacjach z klientami
+                    biznesowymi w zakresie wsparcia przy wyborze odpowiedniego
+                    rozwiązania. Specjalista ds. sprzedaży oraz szkoleń
+                    produktów marki Shining 3D. Od kilku lat zajmuje się
+                    technologią skanowania 3D do takich zastosowań jak: kontrola
+                    jakości, inżynieria odwrotna czy prototypowanie. Prowadzi
+                    szkolenia z zakresu skanowania 3D oraz obsługi programów
+                    wspomagających.
+                  </p>
+                  <div class="speaker__social-icons">
+                    <a href="#" target="_blank" title="Linkedin">
+                      <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                      <span
+                        class="fab fa-twitter-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                      <span
+                        class="fab fa-github-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="speaker">
+              <h3 class="section-title speaker__title">Szymon Staszczak</h3>
+              <div class="speaker-row">
+                <div class="speaker__photo-wrapper photo-background">
+                  <img src="../img/staszczak.jpg" alt="Szymon Staszczak" />
+                </div>
+                <div class="speaker__text-wrapper">
+                  <p class="speaker__company">CadExpert</p>
+                  <p class="speaker__description">
+                    Absolwent kierunku inżynieria materiałowa na Akademii
+                    Górniczo-Hutniczej w Krakowie. Zna drukarki 3D od podszewki.
+                    Od kilku lat zajmuje się serwisem, instalacją oraz obsługą
+                    systemów druku 3D marki Stratasys, MakerBot, Formlabs.
+                    Prowadzi szkolenia wdrożeniowe dla firm z obsługi drukarek
+                    3D w technologiach FDM i SLA. Klienci mogą liczyć na jego
+                    wsparcie i darmowe konsultacje w zakresie doboru technologii
+                    druku oraz materiału do danego zastosowania.
+                  </p>
+                  <div class="speaker__social-icons">
+                    <a href="#" target="_blank" title="Linkedin">
+                      <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                      <span
+                        class="fab fa-twitter-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                      <span
+                        class="fab fa-github-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="speaker">
+              <h3 class="section-title speaker__title">Agnieszka Nowińska</h3>
+              <div class="speaker-row">
+                <div class="speaker__photo-wrapper photo-background">
+                  <img src="../img/nowinska.jpg" alt="Agnieszka Nowińska" />
+                </div>
+                <div class="speaker__text-wrapper">
+                  <p class="speaker__company">Stomatolog, Protetyk, Chirurg</p>
+                  <p class="speaker__description">
+                    Jestem absolwentką Pomorskiego Uniwersytetu Medycznego.
+                    Stomatologia to moja pasja. Już w wieku 12 lat wiedziałam,
+                    że będę dentystą. Na studiach byłam Prezesem Polskiego
+                    Towarzystwa Studentów Stomatologii Oddziału w Szczecinie.
+                    Organizowałam ogólnopolskie konferencje dla lekarzy i
+                    studentów. Jestem zwolenniczką szkoły niemieckiej, swoim
+                    pacjentom zapewniam kompleksowe leczenie, począwszy od
+                    wypełnienia, endodoncji, chorób dziąseł i przyzębia,
+                    skończywszy na protetyce. Doświadczenie i wiedzę zdobyłam
+                    podczas kilkuletniej pracy w klinice w Niemczech.
+                    Nieustannie podnoszę swoje kwalifikacje uczestnicząc w
+                    różnorodnych szkoleniach zarówno w Polsce, jak i za granicą,
+                    w szczególności w Niemczech. Ukończyłam prestiżowe Curiculum
+                    Implatologii Cezanne Institut w Berlinie. Pracowałam z
+                    wykorzystaniem najwyższej jakości systemów, takich jak
+                    Straumann, Schutz oraz Bicon. Na bieżąco wykorzystuję
+                    nowinki technologiczne, opanowałam system Cad/Cam. Mam
+                    doświadczenie w wykorzystywaniu telemedycyny. Od lat jestem
+                    zafascynowana chirurgią. Stale doskonalę techniki zabiegowe
+                    uczestnicząc w praktycznych warsztatach u najlepszych
+                    specjalistów. Jestem także nauczycielem w szkole dla
+                    przyszłych higienistek stomatologicznych. Bardzo lubię
+                    przekazywać wiedzę innym.
+                  </p>
+                  <div class="speaker__social-icons">
+                    <a href="#" target="_blank" title="Linkedin">
+                      <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                      <span
+                        class="fab fa-twitter-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                      <span
+                        class="fab fa-github-square"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">otwórz w nowej karcie</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2 class="sr-only">Stopka</h2>
+      <div class="footer__wrapper wrapper">
+        <p>&copy; 2021 3D3Miasto</p>
+        <p>
+          Stworzone przez
+          <a href="https://github.com/usigna" target="_blank">
+            usigna
+            <span class="sr-only">otwórz w nowej karcie</span>
+          </a>
         </p>
-    </div>
-  </footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
