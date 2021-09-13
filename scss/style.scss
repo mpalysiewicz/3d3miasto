@@ -474,7 +474,8 @@ a {
   }
 }
 
-.photo-background {
+.photo-background,
+.photo-contact {
   position: relative;
   line-height: 0;
   line-height: 0;
@@ -502,6 +503,12 @@ a {
     bottom: -2.5%;
     right: -2.5%;
     z-index: -1;
+  }
+}
+.photo-contact {
+  &::before {
+    bottom: -5%;
+    right: -1.5%;
   }
 }
 
@@ -784,6 +791,8 @@ p {
 
 .program__item {
   @include flex(column, flex-start, center);
+  flex-wrap: wrap;
+  position: relative;
 
   @media (min-width: $largeWidth) {
     @include flex(row, flex-start, space-between);
@@ -794,6 +803,17 @@ p {
   width: 100%;
   @include flex(row, center, center);
   padding: 1rem 0;
+  height: 100%;
+
+  p {
+    display: inline-flex;
+    flex-direction: column;
+    padding-right: 0.5rem;
+  }
+  .hour {
+    width: fit-content;
+    text-align: right;
+  }
 
   @media (min-width: $largeWidth) {
     width: 30%;
@@ -809,9 +829,10 @@ p {
 }
 
 .program__description {
-  width: 100%;
+  width: fit-content;
   padding: 0 0 1rem;
-  position: relative;
+  // position: relative;
+  height: 100%;
 
   p {
     background: lightgray;
@@ -855,7 +876,7 @@ p {
     background: $whiteColor;
     position: absolute;
     top: 0;
-    left: -5px;
+    left: 30%;
     display: none;
     @media (min-width: $largeWidth) {
       display: block;
@@ -1004,21 +1025,52 @@ p {
 }
 
 /* place */
+
 .place__items {
   @include flex(column, flex-start, center);
 
   @media (min-width: $largeWidth) {
-    @include flex(row, flex-start, space-between);
+    // @include flex(row, flex-start, space-between);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'address map'
+      'building workshop';
+
+    .address-box {
+      grid-area: address;
+    }
+    .map-box {
+      grid-area: map;
+    }
+    .building-box {
+      grid-area: building;
+    }
+    .workshop-box {
+      grid-area: workshop;
+    }
+
+    .place__item {
+      padding: 1.5rem;
+      position: relative;
+    }
   }
 }
 
 .place__item {
   width: 100%;
   margin-bottom: 1.5rem;
+}
 
-  @media (min-width: $largeWidth) {
-    width: 50%;
-  }
+.building-box,
+.workshop-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: auto;
+  padding-top: 3rem;
 }
 
 .place__title {
@@ -1031,6 +1083,17 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.place__image {
+  width: 100%;
+  margin: 2rem auto;
+  line-height: 0;
+  padding-right: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
 /* gallery */
 .gallery__wrapper {
   @include flex(column, center, center);
@@ -1223,6 +1286,11 @@ p {
     width: 100%;
     height: 100%;
   }
+}
+
+/* statute */
+.statute-list li {
+  padding-bottom: 0.75rem;
 }
 
 /* footer */
