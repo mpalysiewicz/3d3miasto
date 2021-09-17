@@ -15,22 +15,41 @@
     <link rel="stylesheet" href="../css/style.min.css" />
     <script src="../js/app.js"></script>
     <!-- Facebook Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1294663757660765');
-    fbq('track', 'PageView');
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '1294663757660765');
+      fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1294663757660765&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1294663757660765&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
 
   <body>
@@ -210,6 +229,12 @@
           </article>
           <article>
             <h3 class="section-title">CadExpert</h3>
+            <div class="partners__item">
+              <a href="#" target="_blank">
+                <img src="../img/Cadxpert-kolor-RGB_small.png" alt="CadExpert" />
+                <span class="sr-only">otwórz w nowej karcie</span>
+              </a>
+            </div>
             <p>
               CadXpert jako jedna z pierwszych na polskim rynku firm rozpoczęła
               działalność w obszarze profesjonalnych systemów druku 3D. Misją
@@ -229,6 +254,12 @@
           </article>
           <article>
             <h3 class="section-title">VPI</h3>
+            <div class="partners__item">
+              <a href="#" target="_blank">
+                <img src="../img/logo_vpi_small.png" alt="VPI" />
+                <span class="sr-only">otwórz w nowej karcie</span>
+              </a>
+            </div>
             <p>
               Firma VPI Polska powstała, aby wspierać działalność polskich
               przedsiębiorców przemysłowych w szybkim wytwarzaniu innowacyjnych
@@ -243,14 +274,85 @@
             </p>
           </article>
           <article>
+            <h3 class="section-title">CoLED</h3>
+
+            <div class="partners__item">
+              <a href="https://coled.moodle.pl/" target="_blank">
+                <img src="../img/coLED_logo_small.png" alt="CoLED" />
+                <span class="sr-only">otwórz w nowej karcie</span>
+              </a>
+            </div>
+            <p>
+              Collaborative Learning Environment for Engineering Education,
+              czyli Wspólne Środowisko Nauczania dla Edukacji Inżynierskiej to
+              europejski projekt realizowany w okresie od października 2018 r.
+              do grudnia 2020 r., w ramach programu Erasmus +, Key Action 2:
+              Współpraca na rzecz innowacji i wymiany dobrych praktyk.
+              Konsorcjum CoLED składa się z 5 partnerów z 4 różnych krajów
+              europejskich - Bułgarii, Polski, Portugalii i Rumunii.
+            </p>
+            <p>Głównym celem projektu CoLED było opracowanie innowacyjnego podejścia
+              szkoleniowego opartego na współpracy online w zakresie uczenia się
+              związanego z wprowadzeniem automatyzacji przedsiębiorstw. W ramach
+              projektu opracowano oraz udostępniono platformą elearningową CoLED
+              wspierającą wspólne uczenie się, integrację grupy, indywidualną
+              odpowiedzialność, konsultacje na forum z instruktorem. Do
+              przygotowania oraz prowadzenia szkoleń, warsztatów oraz
+              konferencji wykorzystywano systemy wideo konferencyjne takie jak
+              Zoom, Teams, ClickMeeting, BigBlueButton. 
+            </p>
+            <p>
+              Grupy docelowe oraz bezpośredni beneficjenci projektu to:
+              <ol>
+                <li>
+                  Przedsiębiorcy i
+                  pracownicy przedsiębiorstw, którzy chcą zwiększyć konkurencyjność
+                  swoich firm, a także poprawić swoje kwalifikacje;</li>
+                <li>
+                  Przyszli
+                  przedsiębiorcy i studenci, którzy chcą rozwijać działalność w
+                  sektorze produkcyjnym;
+                </li>
+                <li>
+                  Uniwersytety, ośrodki badawcze;
+                </li>
+                <li>
+                  Trenerzy i dostawcy szkoleń zawodowych.
+                </li>
+              </ol>
+            </p>
+            <div class="video-wrapper">
+              <div class="partners-video">
+                <iframe 
+                  width="560"
+                  height="315" 
+                  src="https://www.youtube.com/embed/ynd8p2Gx53A" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen
+                  ></iframe>
+              </div>
+            </div>
+            </p>
+
+          </article>
+          <article>
             <h3 class="section-title">HackerSpace Trójmiasto</h3>
+            <div class="partners__item">
+              <a href="https://hs3.pl/" target="_blank">
+                <img
+                  src="../img/HS_LOGO_COLOR_BLACK_small.png"
+                  alt="HackerSpace Trójmiasto"
+                />
+                <span class="sr-only">otwórz w nowej karcie</span>
+              </a>
+            </div>
           </article>
           <article>
             <h3 class="section-title">SKALP</h3>
             <div class="partners__item">
               <a href="https://srskalp.pl/" target="_blank">
                 <img
-                  src="../img/SKALP-LOGO.png"
+                  src="../img/SKALP-LOGO_small.png"
                   alt="Stowarzyszenie Robotyków SKALP"
                 />
                 <span class="sr-only">otwórz w nowej karcie</span>
